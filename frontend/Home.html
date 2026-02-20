@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booksky - Home</title>
+    <link rel="stylesheet" href="Book.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 onclick="goMain()" style="cursor:pointer;">Booksky</h1>
+
+    <div class="nav-right">
+        <span onclick="goHome()" style="cursor:pointer;">Home</span>
+        <span onclick="goAnalytics()" style="cursor:pointer;">Book Analytics</span>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="book-container">
+        <h2>Total Books</h2>
+        <p id="total-books">Loading...</p>
+    </div>
+
+    <div class="book-container">
+        <h2>Books Per Author</h2>
+        <div id="books-author"></div>
+    </div>
+
+</div>
+
+<script src="Book.js"></script>
+</body>
+</html>

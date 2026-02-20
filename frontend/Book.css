@@ -1,0 +1,146 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    font-family:'Poppins', sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* pushes left & right */
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #FD6569;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;   /* space between Home & Analytics */
+}
+.container{
+    padding:10px;
+
+}
+.book-container{
+    padding:15px;
+    width:25%;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    margin:30px;
+    display: inline-block;
+    vertical-align: top;
+
+
+}
+h2{
+    color:#FD6569;
+}
+p{
+    margin-top:10px;
+}
+h3{
+    margin-right: 30px;
+    display: inline-block;
+    
+}
+h4{
+    margin-top:10px;
+}
+button{
+    background-color:#FD6569;
+    color:black;
+    padding-bottom:5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right:10px;
+    border-radius:10px;
+    border:none;
+    margin-top:15px;
+}
+.add-btn{
+    color:black;
+    border-radius:100px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 40px;
+    border: none;
+    position: fixed;
+    bottom: 30px;
+    right:30px;
+
+}
+.popup-overlay{
+    background-color:black;
+    opacity:0.8;
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1;
+    display: none;
+}
+.popup-box{
+    background-color: #FD6569;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left:30%;
+    z-index:2;
+    display:none;
+}
+.popup-box input{
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: solid;
+}
+.popup-box textarea{
+    background: transparent;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border: solid;
+}
+.popup-box input::placeholder{
+    color:black;
+}
+.popup-box textarea::placeholder{
+    color:black;
+}
+.popup-box button{
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:white;
+    margin:5px;
+}
+.popup-box input:focus{
+    outline:none;
+}
+.popup-box textarea:focus{
+    outline:none;
+}
+#book-category {
+    width: 100%;
+    padding: 5px;
+    margin: 5px ;
+    border-bottom: 2px solid black;
+    background: transparent;
+    font-size: 20px;
+    outline: none;
+    border: solid;
+}
+

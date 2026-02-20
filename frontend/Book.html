@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksky</title>
+    <link rel="stylesheet" href="Book.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family-Poppins&display-swap" rel="stylesheet"> 
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booksky</title>
+    <link rel="stylesheet" href="Book.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 onclick="goMain()" style="cursor:pointer;">Booksky</h1>
+
+    <div class="nav-right">
+        <span onclick="goHome()" style="cursor:pointer;">Home</span>
+        <span onclick="goAnalytics()" style="cursor:pointer;">Book Analytics</span>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="book-container">
+
+    </div>
+    <!-- Books will load here -->
+</div>
+
+<div class="popup-overlay"></div>
+
+<div class="popup-box">
+    <h3>Add Book</h3>
+    <form>
+        <input type="text" placeholder="Book-Title" id="book-title" required>
+        <input type="text" placeholder="Book-Author" id="book-author" required>
+        <input type="number" placeholder="Price" id="book-price" required>
+
+        <select id="book-category" required>
+            <option value="">Select Category</option>
+            <option value="1">Finance</option>
+            <option value="2">Self Development</option>
+            <option value="3">Programming</option>
+            <option value="4">Business</option>
+            <option value="5">Entrepreneurship</option>
+            <option value="6">Health</option>
+            <option value="7">Motivation</option>
+            <option value="8">Technology</option>
+        </select>
+
+        <textarea placeholder="Short-Description" id="book-description" required></textarea>
+
+        <button id="add-book">Add</button>
+        <button id="cancel-popup">Cancel</button>
+    </form>
+</div>
+
+<button class="add-btn" id="add-popup">+</button>
+
+<script src="Book.js"></script>
+</body>
+</html>
