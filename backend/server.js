@@ -1,10 +1,14 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-
+const path = require("path");
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "frontend")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "Home.html"));
+});
 
 const connection = mysql.createConnection({
   host: process.env.MYSQLHOST,
@@ -21,6 +25,7 @@ connection.connect((err) => {
   }
   console.log("Connected to Railway MySQL");
 });
+
 
 // -------- BOOKS PER CATEGORY --------
 app.get("/books-category", (req, res) => {
@@ -132,6 +137,12 @@ app.delete("/delete-book/:id", (req, res) => {
     db.query("DELETE FROM books WHERE book_id = ?",
     [req.params.id],
     () => res.send("Deleted"));
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
 });
 
 app.listen(3000, () => {
