@@ -6,17 +6,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "booksky"
+const connection = mysql.createConnection({
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT
 });
 
-db.connect(err => {
-    if (err) console.log(err);
-    else console.log("MySQL Connected");
+connection.connect((err) => {
+  if (err) {
+    console.error("Database connection failed:", err);
+    return;
+  }
+  console.log("Connected to Railway MySQL");
 });
 
 // -------- BOOKS PER CATEGORY --------
